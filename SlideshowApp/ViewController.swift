@@ -99,6 +99,7 @@ class ViewController: UIViewController {
         
        // 進む・戻るボタンを押すと画像が変化する処理をまとめた関数　nextShow()
         
+        
         // UIImageViewを作成する.
         myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
         
