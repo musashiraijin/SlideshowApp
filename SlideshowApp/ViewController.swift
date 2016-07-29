@@ -12,6 +12,17 @@ class ViewController: UIViewController {
     
     //　進むボタンのAction
     @IBAction func forward(sender: AnyObject) {
+        
+        if n < 0 {
+            n = 0
+        } else if 0 <= n < 3 {
+            n = n + 1
+        } else if n >= 3 {
+            n = 0
+        }
+        
+        func nextShow(n)
+        
     }
     
     // 戻るボタンのAction
@@ -26,6 +37,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     
+    var n = 0
+    
+    
     // 配列 pictures　画像３枚、ライオン、トラ、チーター
     let pictures = ["lion.jpeg", "tiger.jpeg", "cheetah.jpeg"]
     
@@ -36,11 +50,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+        // 変数nを初期値0に設定
+        n = 0
+        
+        
         // UIImageViewを作成する.
         myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
         
         // 表示する画像を設定する.
-        let myImage = UIImage(named: pictures[0])
+        let myImage = UIImage(named: pictures[n])
         
         // 画像をUIImageViewに設定する.
         myImageView.image = myImage
@@ -58,6 +76,28 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func nextShow(n:Int) {
+        
+       // 進む・戻るボタンを押すと画像が変化する処理をまとめた関数　nextShow()
+        
+        // UIImageViewを作成する.
+        myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
+        
+        // 表示する画像を設定する.
+        let myImage = UIImage(named: pictures[n])
+        
+        // 画像をUIImageViewに設定する.
+        myImageView.image = myImage
+        
+        // 画像の表示する座標を指定する.
+        myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 180.0)
+        
+        // UIImageViewをViewに追加する.
+        self.view.addSubview(myImageView)
+        
     }
 
 
