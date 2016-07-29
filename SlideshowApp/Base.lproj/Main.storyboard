@@ -30,6 +30,9 @@
                                     <constraint firstAttribute="width" constant="50" id="3jk-Ef-dat"/>
                                 </constraints>
                                 <state key="normal" title="再生"/>
+                                <connections>
+                                    <action selector="playStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jea-E0-dO1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKf-kA-EQ1">
                                 <rect key="frame" x="165" y="350" width="50" height="30"/>
@@ -37,6 +40,9 @@
                                     <constraint firstAttribute="width" constant="50" id="6XU-Fp-Ah5"/>
                                 </constraints>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chw-4k-eFn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyd-4z-7lR">
                                 <rect key="frame" x="385" y="350" width="50" height="30"/>
@@ -44,6 +50,9 @@
                                     <constraint firstAttribute="width" constant="50" id="dtl-5L-Eog"/>
                                 </constraints>
                                 <state key="normal" title="進む"/>
+                                <connections>
+                                    <action selector="forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vea-OS-BCC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -61,6 +70,9 @@
                             <constraint firstItem="h5M-ep-o9G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yaK-i7-Meo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="h5M-ep-o9G" id="vGj-u7-2A7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

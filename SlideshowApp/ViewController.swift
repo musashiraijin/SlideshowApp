@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func forward(sender: AnyObject) {
+    }
+    @IBAction func back(sender: AnyObject) {
+    }
+    @IBAction func playStop(sender: AnyObject) {
+    }
+    @IBOutlet weak var image: UIImageView!
+    
+    let picture = ["lion.jpeg", "tiger.jpeg", "cheetah.jpeg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
