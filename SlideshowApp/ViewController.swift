@@ -13,20 +13,36 @@ class ViewController: UIViewController {
     //　進むボタンのAction
     @IBAction func forward(sender: AnyObject) {
         
+        
+        // 画像が何枚目か判断する分岐
         if n < 0 {
             n = 0
-        } else if 0 <= n < 3 {
+        } else if 0 <= n && n < 3 {
             n = n + 1
         } else if n >= 3 {
             n = 0
         }
         
-        func nextShow(n)
+        nextShow(n)
         
     }
     
+    
     // 戻るボタンのAction
     @IBAction func back(sender: AnyObject) {
+        
+        
+        // 画像が何枚目か判断する分岐
+        if n <= 0 {
+            n = 2
+        } else if 0 < n && n < 3 {
+            n = n - 1
+        } else if n >= 3 {
+            n = 3
+        }
+        
+        nextShow(n)
+
     }
     
     // 再生・停止ボタンのAction
