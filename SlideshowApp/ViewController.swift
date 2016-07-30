@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         // 画像が何枚目か判断する分岐
         if n < 0 {
+            
             n = 0
         } else if 0 <= n && n < 2  {
             n = n + 1
@@ -47,10 +48,19 @@ class ViewController: UIViewController {
     
     // 再生・停止ボタンのAction
     @IBAction func playStop(sender: AnyObject) {
+        
+        n = 0
+        
+        nextShow(n)
+        
     }
+    
+    
+    
     
     // UIImageViweのOutlet
     @IBOutlet weak var imageView: UIImageView!
+    
     
     
     var n = 0
