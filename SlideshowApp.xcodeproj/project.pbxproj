@@ -12,9 +12,9 @@
 		2F77A2591D4B2BE6008853C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2571D4B2BE6008853C2 /* Main.storyboard */; };
 		2F77A25B1D4B2BE6008853C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A25A1D4B2BE6008853C2 /* Assets.xcassets */; };
 		2F77A25E1D4B2BE6008853C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A25C1D4B2BE6008853C2 /* LaunchScreen.storyboard */; };
-		2F77A2681D4B302E008853C2 /* cheetah.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2651D4B302E008853C2 /* cheetah.jpeg */; };
-		2F77A2691D4B302E008853C2 /* lion.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2661D4B302E008853C2 /* lion.jpeg */; };
-		2F77A26A1D4B302E008853C2 /* tiger.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2671D4B302E008853C2 /* tiger.jpeg */; };
+		2F8D95A71D4C83AE00256970 /* cheetah.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D95A41D4C83AE00256970 /* cheetah.jpeg */; };
+		2F8D95A81D4C83AE00256970 /* lion.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D95A51D4C83AE00256970 /* lion.jpeg */; };
+		2F8D95A91D4C83AE00256970 /* tiger.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D95A61D4C83AE00256970 /* tiger.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		2F77A25A1D4B2BE6008853C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F77A25D1D4B2BE6008853C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F77A25F1D4B2BE6008853C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F77A2651D4B302E008853C2 /* cheetah.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cheetah.jpeg; path = ../../Downloads/cheetah.jpeg; sourceTree = "<group>"; };
-		2F77A2661D4B302E008853C2 /* lion.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lion.jpeg; path = ../../Downloads/lion.jpeg; sourceTree = "<group>"; };
-		2F77A2671D4B302E008853C2 /* tiger.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tiger.jpeg; path = ../../Downloads/tiger.jpeg; sourceTree = "<group>"; };
+		2F8D95A41D4C83AE00256970 /* cheetah.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheetah.jpeg; sourceTree = "<group>"; };
+		2F8D95A51D4C83AE00256970 /* lion.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpeg; sourceTree = "<group>"; };
+		2F8D95A61D4C83AE00256970 /* tiger.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +44,9 @@
 		2F77A2471D4B2BE5008853C2 = {
 			isa = PBXGroup;
 			children = (
-				2F77A2651D4B302E008853C2 /* cheetah.jpeg */,
-				2F77A2661D4B302E008853C2 /* lion.jpeg */,
-				2F77A2671D4B302E008853C2 /* tiger.jpeg */,
+				2F8D95A41D4C83AE00256970 /* cheetah.jpeg */,
+				2F8D95A51D4C83AE00256970 /* lion.jpeg */,
+				2F8D95A61D4C83AE00256970 /* tiger.jpeg */,
 				2F77A2521D4B2BE6008853C2 /* SlideshowApp */,
 				2F77A2511D4B2BE6008853C2 /* Products */,
 			);
@@ -132,11 +132,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F77A25E1D4B2BE6008853C2 /* LaunchScreen.storyboard in Resources */,
-				2F77A2691D4B302E008853C2 /* lion.jpeg in Resources */,
+				2F8D95A81D4C83AE00256970 /* lion.jpeg in Resources */,
 				2F77A25B1D4B2BE6008853C2 /* Assets.xcassets in Resources */,
-				2F77A2681D4B302E008853C2 /* cheetah.jpeg in Resources */,
+				2F8D95A71D4C83AE00256970 /* cheetah.jpeg in Resources */,
 				2F77A2591D4B2BE6008853C2 /* Main.storyboard in Resources */,
-				2F77A26A1D4B302E008853C2 /* tiger.jpeg in Resources */,
+				2F8D95A91D4C83AE00256970 /* tiger.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +298,7 @@
 				2F77A2641D4B2BE6008853C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

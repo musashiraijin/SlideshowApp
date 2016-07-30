@@ -52,55 +52,43 @@ class ViewController: UIViewController {
         // nの初期化
         n = 0
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow"), userInfo: nil, repeats: true);
         
-        func slideShow(){
-            
-            // nが0以下ならn=0にする
-            if n < 0 {
-                n = 0
-                
-            } else if 0 <= n && n <= 1 {
-                // nが0か1なら画像を表示、その後n+1でnを増やす
-                
-                nextShow(n)
-                
-                n = n + 1
-                
-            } else if n == 2 {
-                // nが2なら画像を表示後、nをn=0にする
-                
-                nextShow(n)
-                
-                n = 0
-                
-            }else if n > 2 {
-                
-                n = 0
-                
-            }
-            
-        }
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
         
         
+ //       var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow"), userInfo: nil, repeats: true);
         
-//        func onUpdate(timer: NSTimer) {
-
-            // 現在の画像表示後、次の画像を表示する準備をする
-//            nextShow(n)
-//            n = n + 1
-            
-//        }
-
-        
-//        func updateTimer() {
-            
-//            NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("onUpdate:"), userInfo: nil, repeats: true)
-//        }
         
     }
     
-    
+    func slideShow(){
+        
+        // nが0以下ならn=0にする
+        if n < 0 {
+            n = 0
+            
+        } else if 0 <= n && n <= 1 {
+            // nが0か1なら画像を表示、その後n+1でnを増やす
+            
+            nextShow(n)
+            
+            n = n + 1
+            
+        } else if n == 2 {
+            // nが2なら画像を表示後、nをn=0にする
+            
+            nextShow(n)
+            
+            n = 0
+            
+        }else if n > 2 {
+            
+            n = 0
+            
+        }
+        
+    }
+
     
     
     // UIImageViweのOutlet
