@@ -56,18 +56,19 @@ class ViewController: UIViewController {
         
         func slideShow(){
             
+            // nが0以下ならn=0にする
             if n < 0 {
                 n = 0
                 
-                nextShow(n)
-                
             } else if 0 <= n && n <= 1 {
+                // nが0か1なら画像を表示、その後n+1でnを増やす
                 
                 nextShow(n)
                 
                 n = n + 1
                 
             } else if n == 2 {
+                // nが2なら画像を表示後、nをn=0にする
                 
                 nextShow(n)
                 
@@ -76,7 +77,6 @@ class ViewController: UIViewController {
             }else if n > 2 {
                 
                 n = 0
-                nextShow(n)
                 
             }
             
