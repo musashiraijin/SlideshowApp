@@ -49,9 +49,51 @@ class ViewController: UIViewController {
     // 再生・停止ボタンのAction
     @IBAction func playStop(sender: AnyObject) {
         
+        // nの初期化
         n = 0
         
-        nextShow(n)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow"), userInfo: nil, repeats: true);
+        
+        func slideShow(){
+            //ここが実行されます
+            
+            if n < 0 {
+                n = 0
+                
+                nextShow(n)
+                
+                n = n + 1
+                
+            } else if 0 <= n && n <= 2 {
+                
+                nextShow(n)
+                
+                n = n + 1
+                
+            } else if n > 2 {
+                
+                n = 0
+                nextShow(n)
+                
+            }
+            
+        }
+        
+        
+        
+//        func onUpdate(timer: NSTimer) {
+
+            // 現在の画像表示後、次の画像を表示する準備をする
+//            nextShow(n)
+//            n = n + 1
+            
+//        }
+
+        
+//        func updateTimer() {
+            
+//            NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("onUpdate:"), userInfo: nil, repeats: true)
+//        }
         
     }
     
