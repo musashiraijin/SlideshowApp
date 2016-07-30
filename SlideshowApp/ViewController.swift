@@ -55,22 +55,25 @@ class ViewController: UIViewController {
         var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow"), userInfo: nil, repeats: true);
         
         func slideShow(){
-            //ここが実行されます
             
             if n < 0 {
                 n = 0
                 
                 nextShow(n)
                 
-                n = n + 1
-                
-            } else if 0 <= n && n <= 2 {
+            } else if 0 <= n && n <= 1 {
                 
                 nextShow(n)
                 
                 n = n + 1
                 
-            } else if n > 2 {
+            } else if n == 2 {
+                
+                nextShow(n)
+                
+                n = 0
+                
+            }else if n > 2 {
                 
                 n = 0
                 nextShow(n)
