@@ -52,14 +52,11 @@ class ViewController: UIViewController {
         // nの初期化
         n = 0
         
-        
         var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
         
-        
- //       var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow"), userInfo: nil, repeats: true);
-        
-        
-    }
+        }
+    
+    
     
     func slideShow(){
         
