@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             playStopButton.setTitle("停止", forState: .Normal)
             
             //timerを生成する.
-            timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow"), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
             
             // スライドショー動作中
             timerRunning = true
