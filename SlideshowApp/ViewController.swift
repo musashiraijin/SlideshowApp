@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     // 画像の変数nの宣言・初期値0
     var n = 0
     
-    // timerが動いているかどうか確認
+    // timerが動いているかどうか確認・最初は止まっている false
     var timerRunning = false
     
     // 変数timerの宣言
@@ -80,6 +80,9 @@ class ViewController: UIViewController {
             //timerを生成する.
             timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow:"), userInfo: nil, repeats: true)
             
+            // スライドショー動作中
+            timerRunning = true
+            
             
         } else if timerRunning == true {
             // timerが動いていたら
@@ -97,6 +100,9 @@ class ViewController: UIViewController {
 // スライドショーで２秒ごとに画像を変えるタイマー
 //        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
     
+
+    
+    // スライドショーを実行する関数
     func slideShow(){
         
         // nが0以下ならn=0にする
