@@ -71,6 +71,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Back" destination="bKf-kA-EQ1" id="rcI-Qu-MUk"/>
+                        <outlet property="Forward" destination="Gyd-4z-7lR" id="THJ-ql-OjB"/>
                         <outlet property="imageView" destination="h5M-ep-o9G" id="kCL-U0-NoM"/>
                         <outlet property="playStopButton" destination="hA0-8N-uC6" id="O84-Fh-Jcs"/>
                     </connections>

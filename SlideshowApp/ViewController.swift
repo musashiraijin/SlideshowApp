@@ -19,10 +19,15 @@ class ViewController: UIViewController {
     // 変数timerの宣言
     var timer : NSTimer!
     
+    // 進むボタンのOutlet
+    @IBOutlet weak var Forward: UIButton!
+    
+    // 戻るボタンのOutlet
+    @IBOutlet weak var Back: UIButton!
+    
     
     //　進むボタンのAction
     @IBAction func forward(sender: AnyObject) {
-        
         
         // 画像が何枚目か判断する分岐
         if n < 0 {
@@ -55,12 +60,7 @@ class ViewController: UIViewController {
 
     }
     
-    
-    // スライドショーで２秒ごとに画像を変えるタイマー
-//    var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
-    
-    
-    
+        
     // 再生・停止ボタンのOutlet
     var playStopButton: UIButton!
     
@@ -74,8 +74,16 @@ class ViewController: UIViewController {
             // nを0に初期化する
             n = 0
             
-            //ボタンのタイトル変更.
+            // ボタンのタイトル変更.
             playStopButton.setTitle("停止", forState: .Normal)
+            
+            // 進むボタンの無効化
+            Forward.enabled = false
+            
+            // 戻るボタンの無効化
+            Back.enabled = false
+            
+            
             
             //timerを生成する.
             timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
@@ -87,11 +95,17 @@ class ViewController: UIViewController {
         } else if timerRunning == true {
             // timerが動いていたら
             
-            //timerを破棄する.
+            // timerを破棄する.
             timer.invalidate()
             
-            //ボタンのタイトル変更.
+            // ボタンのタイトル変更.
             playStopButton.setTitle("再生", forState: .Normal)
+            
+            // 進むボタンの有効化
+            Forward.enabled = true
+            
+            // 戻るボタンの有効化
+            Back.enabled = true
             
             //  timerを止める
             timerRunning = false
