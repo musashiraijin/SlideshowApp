@@ -10,13 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // 画像の変数nの宣言・初期値0
+    var n = 0
+    
+    // timerが動いているかどうか確認
+    var timerRunning = false
+    
+    // 変数timerの宣言
+    var timer : NSTimer!
+    
+    
     //　進むボタンのAction
     @IBAction func forward(sender: AnyObject) {
         
         
         // 画像が何枚目か判断する分岐
         if n < 0 {
-            
             n = 0
         } else if 0 <= n && n < 2  {
             n = n + 1
@@ -46,17 +55,47 @@ class ViewController: UIViewController {
 
     }
     
+    
+    // スライドショーで２秒ごとに画像を変えるタイマー
+//    var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
+    
+    
+    
+    // 再生・停止ボタンのOutlet
+    var playStopButton: UIButton!
+    
+    
     // 再生・停止ボタンのAction
     @IBAction func playStop(sender: AnyObject) {
         
-        // nの初期化
-        n = 0
-        
-        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
-        
+        //timerが止まっているなら.
+        if timerRunning == false {
+            
+            // nを0に初期化する
+            n = 0
+            
+            //ボタンのタイトル変更.
+            playStopButton.setTitle("停止", forState: .Normal)
+            
+            //timerを生成する.
+            timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("slideShow:"), userInfo: nil, repeats: true)
+            
+            
+        } else if timerRunning == true {
+            // timerが動いていたら
+            
+            //timerを破棄する.
+            timer.invalidate()
+            
+            //ボタンのタイトル変更.
+            playStopButton.setTitle("再生", forState: .Normal)
+            
         }
-    
-    
+    }
+        
+        
+// スライドショーで２秒ごとに画像を変えるタイマー
+//        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
     
     func slideShow(){
         
@@ -68,14 +107,12 @@ class ViewController: UIViewController {
             // nが0か1なら画像を表示、その後n+1でnを増やす
             
             nextShow(n)
-            
             n = n + 1
             
         } else if n == 2 {
             // nが2なら画像を表示後、nをn=0にする
             
             nextShow(n)
-            
             n = 0
             
         }else if n > 2 {
@@ -91,9 +128,6 @@ class ViewController: UIViewController {
     // UIImageViweのOutlet
     @IBOutlet weak var imageView: UIImageView!
     
-    
-    
-    var n = 0
     
     
     // 配列 pictures　画像３枚、ライオン、トラ、チーター
@@ -126,8 +160,8 @@ class ViewController: UIViewController {
         self.view.addSubview(myImageView)
         
         
-        
     }
+        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -135,6 +169,9 @@ class ViewController: UIViewController {
     }
     
     
+    
+        
+        
     func nextShow(n:Int) {
         
        // 進む・戻るボタンを押すと画像が変化する処理をまとめた関数　nextShow()
