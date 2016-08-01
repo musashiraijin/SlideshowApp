@@ -158,8 +158,8 @@ class ViewController: UIViewController {
 
     
     
-    // UIImageViweのOutlet
     @IBOutlet weak var imageView: UIImageView!
+   
     
         
     
@@ -197,14 +197,14 @@ class ViewController: UIViewController {
         
         
         // ImageViewをタップ可能にする関数の初期化
-        var varImageView = picture
+        var imageView = picture
         
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.didClickImageView(_:)))
         
         // UIImageViewのタップイベントの検知可能にする
-        varImageView.userInteractionEnabled = true
+        imageView.userInteractionEnabled = true
         
-        varImageView.addGestureRecognizer(tapGestureRecognizer)
+        imageView.addGestureRecognizer(tapGestureRecognizer)
         
 
     }
