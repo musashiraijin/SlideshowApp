@@ -161,7 +161,7 @@ class ViewController: UIViewController {
     // UIImageViweのOutlet
     @IBOutlet weak var imageView: UIImageView!
     
-    
+        
     
     // 配列 pictures　画像３枚、ライオン、トラ、チーター
     let pictures = ["lion.jpeg", "tiger.jpeg", "cheetah.jpeg"]
@@ -192,19 +192,21 @@ class ViewController: UIViewController {
         self.view.addSubview(myImageView)
         
         
+        
+        
+        
+        
         // ImageViewをタップ可能にする関数の初期化
-        let img = UIImage(named: "lion.jpeg")
-        picture.image = img
+        var varImageView = picture
         
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.didClickImageView(_:)))
         
-        
-        picture.addGestureRecognizer(tapGestureRecognizer)
-        
         // UIImageViewのタップイベントの検知可能にする
-        imageView.userInteractionEnabled = true
-
+        varImageView.userInteractionEnabled = true
         
+        varImageView.addGestureRecognizer(tapGestureRecognizer)
+        
+
     }
     
     
