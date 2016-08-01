@@ -19,11 +19,19 @@ class ViewController: UIViewController {
     // 変数timerの宣言
     var timer : NSTimer!
     
+    // 画面遷移時の画像の定数
+    var picture = "lion.jpeg"
+    
+    
     // 進むボタンのOutlet
     @IBOutlet weak var Forward: UIButton!
     
     // 戻るボタンのOutlet
     @IBOutlet weak var Back: UIButton!
+    
+    // 遷移先moveImageViewから戻るseque
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+    }
     
     
     //　進むボタンのAction
@@ -40,6 +48,8 @@ class ViewController: UIViewController {
         
         nextShow(n)
         
+        // ImageView がタップされた時の動物の画像
+        picture = pictures[n]
     }
     
     
@@ -57,7 +67,10 @@ class ViewController: UIViewController {
         }
         
         nextShow(n)
-
+        
+        // ImageView がタップされた時の動物の画像
+        picture = pictures[n]
+    
     }
     
         
@@ -114,11 +127,8 @@ class ViewController: UIViewController {
     }
         
         
-// スライドショーで２秒ごとに画像を変えるタイマー
-//        var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
-    
+    // スライドショーで２秒ごとに画像を変えるタイマー
 
-    
     // スライドショーを実行する関数
     func slideShow(){
         
@@ -166,7 +176,6 @@ class ViewController: UIViewController {
         // 変数nを初期値0に設定
         n = 0
         
-        
         // UIImageViewを作成する.
         myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
         
@@ -183,15 +192,38 @@ class ViewController: UIViewController {
         self.view.addSubview(myImageView)
         
         
-    }
+        // ImageViewをタップ可能にする関数の初期化
+        let img = UIImage(named: "lion.jpeg")
+        picture.image = img
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.didClickImageView(_:)))
+        
+        
+        picture.addGestureRecognizer(tapGestureRecognizer)
+        
+        // UIImageViewのタップイベントの検知可能にする
+        imageView.userInteractionEnabled = true
+
+        
+    }
+    
+    
+    
+    
+    // 画像がタップされた時に反応する処理を書いた関数
+    func didClickImageView(recognizer: UIGestureRecognizer) {
+        if let imageView = recognizer.view as? UIImageView {
+            let nextViewController = moveImageView
+            nextViewController.image = picture
+            /** netViewController への遷移 */
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
         
         
