@@ -214,7 +214,7 @@ class ViewController: UIViewController {
     
     // 画像がタップされた時に反応する処理を書いた関数
     func didClickImageView(recognizer: UIGestureRecognizer) {
-        if let imageView = recognizer.view as? UIImageView {
+        if let varImageView = recognizer.view as? UIImageView {
             let nextViewController = moveImageView
             nextViewController.image = picture
             /** netViewController への遷移 */
