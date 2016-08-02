@@ -195,7 +195,7 @@ class ViewController: UIViewController {
         
         
         
-        
+/*
         // ImageViewをタップ可能にする関数の初期化
         var imageView = picture
         
@@ -205,13 +205,13 @@ class ViewController: UIViewController {
         imageView.userInteractionEnabled = true
         
         imageView.addGestureRecognizer(tapGestureRecognizer)
-
+*/
 
     }
     
     
     
-
+/*
     // 画像がタップされた時に反応する処理を書いた関数
     func didClickImageView(recognizer: UIGestureRecognizer) {
         if let varImageView = recognizer.view as? UIImageView {
@@ -220,7 +220,7 @@ class ViewController: UIViewController {
             /** netViewController への遷移 */
         }
     }
-    
+*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
