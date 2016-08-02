@@ -12,7 +12,7 @@ class MoveViewController: UIViewController {
     
     // UIImageViewのOutlet
     @IBOutlet weak var moveImageView: UIImageView!
-
+    
     
     // 表示する画像pictureの初期化
     var picture = "lion.jpeg"
