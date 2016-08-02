@@ -196,7 +196,7 @@ class ViewController: UIViewController {
         
         
         
-/*        // ImageViewをタップ可能にする関数の初期化
+        // ImageViewをタップ可能にする関数の初期化
         var imageView = picture
         
         let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.didClickImageView(_:)))
@@ -205,13 +205,13 @@ class ViewController: UIViewController {
         imageView.userInteractionEnabled = true
         
         imageView.addGestureRecognizer(tapGestureRecognizer)
-*/        
+
 
     }
     
     
     
-/*
+
     // 画像がタップされた時に反応する処理を書いた関数
     func didClickImageView(recognizer: UIGestureRecognizer) {
         if let varImageView = recognizer.view as? UIImageView {
@@ -226,7 +226,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-*/
+
         
     // 進む・戻るボタンを押すと画像が変化する処理をまとめた関数　nextShow()
     func nextShow(n:Int) {
