@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // 画像の変数nの宣言・初期値0
     var n = 0
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     // 画面遷移時の画像の定数
 //    var picture : UIImageView!
     
-    var picture = UIImage(named: "lion.jpeg")
+    var picture = "lion.jpeg"
     
     // 進むボタンのOutlet
     @IBOutlet weak var Forward: UIButton!
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         nextShow(n)
         
         // ImageView がタップされた時の動物の画像
-        picture = UIImage(named: pictures[n])
+        picture = pictures[n]
     }
     
     
@@ -70,17 +70,17 @@ class ViewController: UIViewController {
         nextShow(n)
         
         // ImageView がタップされた時の動物の画像
-        picture = UIImage(named: pictures[n])    
+        picture = pictures[n]   
     }
     
         
     // 再生・停止ボタンのOutlet
-    var playStopButton: UIButton!
+    @IBOutlet weak var playStopButton: UIButton!
     
     
     // 再生・停止ボタンのAction
     @IBAction func playStop(sender: AnyObject) {
-        
+    
         //timerが止まっているなら.
         if timerRunning == false {
             
@@ -176,39 +176,41 @@ class ViewController: UIViewController {
         
         imageView.image = UIImage(named: pictures[n])
         
-/*
-        // UIImageViewを作成する.
-        myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
-        
-        // 表示する画像を設定する.
-        let myImage = UIImage(named: pictures[n])
-        
-        // 画像をUIImageViewに設定する.
-        myImageView.image = myImage
-        
-        // 画像の表示する座標を指定する.
-        myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 180.0)
-        
-        // UIImageViewをViewに追加する.
-        self.view.addSubview(myImageView)
-        
- */
         
         
         
-/*
-        // ImageViewをタップ可能にする関数の初期化
-        var imageView = picture
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapped(_:)))
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(ViewController.didClickImageView(_:)))
+        tapGesture.delegate = self;
+        
+        self.view.addGestureRecognizer(tapGesture)
         
         // UIImageViewのタップイベントの検知可能にする
-        imageView.userInteractionEnabled = true
+//        imageView.userInteractionEnabled = true
         
-        imageView.addGestureRecognizer(tapGestureRecognizer)
-*/
+//        imageView.addGestureRecognizer(tapGestureRecognizer)
 
     }
+    
+    
+    
+    func tapped(sender: UITapGestureRecognizer){
+        print(sender)
+        //         ShowDetailViewControllerへ遷移するために Segue を呼び出す
+        performSegueWithIdentifier(picture,sender: nil)
+        
+    }
+
+    // Segue 準備
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == picture) {
+            let detailShow: MoveViewController = (segue.destinationViewController as? MoveViewController)!
+            // ViewControllerのvc2Textにメッセージを設定
+            
+            detailShow.img = imageView.image
+        }
+    }
+    
     
     
     

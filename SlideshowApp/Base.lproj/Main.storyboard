@@ -28,17 +28,6 @@
                                     <action selector="forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vea-OS-BCC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-8N-uC6">
-                                <rect key="frame" x="275" y="410" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="HoD-rg-kg9"/>
-                                    <constraint firstAttribute="height" constant="30" id="Rm7-hD-I1s"/>
-                                </constraints>
-                                <state key="normal" title="再生"/>
-                                <connections>
-                                    <action selector="playStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jea-E0-dO1"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-gq-JPC">
                                 <rect key="frame" x="100" y="60" width="400" height="300"/>
                                 <constraints>
@@ -55,6 +44,17 @@
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chw-4k-eFn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA0-8N-uC6">
+                                <rect key="frame" x="275" y="410" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HoD-rg-kg9"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rm7-hD-I1s"/>
+                                </constraints>
+                                <state key="normal" title="再生"/>
+                                <connections>
+                                    <action selector="playStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FhF-B2-97j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,7 +84,7 @@
                         <outlet property="Back" destination="bKf-kA-EQ1" id="rcI-Qu-MUk"/>
                         <outlet property="Forward" destination="Gyd-4z-7lR" id="THJ-ql-OjB"/>
                         <outlet property="imageView" destination="Bvb-gq-JPC" id="sUh-qh-VkH"/>
-                        <outlet property="playStopButton" destination="hA0-8N-uC6" id="O84-Fh-Jcs"/>
+                        <outlet property="playStopButton" destination="hA0-8N-uC6" id="OsI-qL-dHH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,7 +113,7 @@
                                 <rect key="frame" x="285" y="500" width="30" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="lE3-Df-9hX" kind="unwind" unwindAction="unwind:" id="rHn-Ao-h90"/>
+                                    <segue destination="lE3-Df-9hX" kind="unwind" unwindAction="unwind:" id="c55-yp-Fvf"/>
                                 </connections>
                             </button>
                         </subviews>

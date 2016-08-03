@@ -13,9 +13,11 @@ class MoveViewController: UIViewController {
     // UIImageViewのOutlet
     @IBOutlet weak var moveImageView: UIImageView!
     
-    
     // 表示する画像pictureの初期化
     var picture = "lion.jpeg"
+    
+    var img:UIImage?
+    
     
 //    var myImageView: UIImageView!
     
@@ -24,10 +26,7 @@ class MoveViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
-        // UIImageViewを作成する.
-//        myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
-        
+                
         // 表示する画像を設定する.
         let myImage = UIImage(named: picture)
         
