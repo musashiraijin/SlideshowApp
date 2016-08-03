@@ -177,7 +177,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         imageView.image = UIImage(named: pictures[n])
         
         
-        
+        // UIImageViewのタップイベントの検知可能にする
+//        imageView.userInteractionEnabled = true
         
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapped(_:)))
         
@@ -185,8 +186,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.view.addGestureRecognizer(tapGesture)
         
-        // UIImageViewのタップイベントの検知可能にする
-//        imageView.userInteractionEnabled = true
         
 //        imageView.addGestureRecognizer(tapGestureRecognizer)
 
@@ -197,17 +196,19 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     func tapped(sender: UITapGestureRecognizer){
         print(sender)
         //         ShowDetailViewControllerへ遷移するために Segue を呼び出す
-        performSegueWithIdentifier(picture,sender: nil)
+        performSegueWithIdentifier("toMoveViewController", sender: nil)
         
     }
 
     // Segue 準備
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == picture) {
-            let detailShow: MoveViewController = (segue.destinationViewController as? MoveViewController)!
-            // ViewControllerのvc2Textにメッセージを設定
+        
+        if (segue.identifier == "toMoveViewController") {
             
-            detailShow.img = imageView.image
+            let picture: MoveViewController = (segue.destinationViewController as? MoveViewController)!
+            
+            
+            picture.img = imageView.image
         }
     }
     

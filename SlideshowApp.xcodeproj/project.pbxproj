@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F4BC85E1D4EDFD3007B6483 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BC85D1D4EDFD3007B6483 /* MoveViewController.swift */; };
+		2F19641F1D5227F700ADF9C0 /* MoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19641E1D5227F700ADF9C0 /* MoveViewController.swift */; };
 		2F77A2541D4B2BE6008853C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77A2531D4B2BE6008853C2 /* AppDelegate.swift */; };
 		2F77A2561D4B2BE6008853C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77A2551D4B2BE6008853C2 /* ViewController.swift */; };
 		2F77A2591D4B2BE6008853C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2571D4B2BE6008853C2 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F4BC85D1D4EDFD3007B6483 /* MoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
+		2F19641E1D5227F700ADF9C0 /* MoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveViewController.swift; sourceTree = "<group>"; };
 		2F77A2501D4B2BE6008853C2 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F77A2531D4B2BE6008853C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F77A2551D4B2BE6008853C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				2F77A2531D4B2BE6008853C2 /* AppDelegate.swift */,
 				2F77A2551D4B2BE6008853C2 /* ViewController.swift */,
-				2F4BC85D1D4EDFD3007B6483 /* MoveViewController.swift */,
+				2F19641E1D5227F700ADF9C0 /* MoveViewController.swift */,
 				2F77A2571D4B2BE6008853C2 /* Main.storyboard */,
 				2F77A25A1D4B2BE6008853C2 /* Assets.xcassets */,
 				2F77A25C1D4B2BE6008853C2 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			files = (
 				2F77A2561D4B2BE6008853C2 /* ViewController.swift in Sources */,
 				2F77A2541D4B2BE6008853C2 /* AppDelegate.swift in Sources */,
-				2F4BC85E1D4EDFD3007B6483 /* MoveViewController.swift in Sources */,
+				2F19641F1D5227F700ADF9C0 /* MoveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

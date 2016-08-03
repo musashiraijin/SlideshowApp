@@ -2,7 +2,7 @@
 //  MoveViewController.swift
 //  SlideshowApp
 //
-//  Created by Musashi Raijin on 2016/08/01.
+//  Created by Musashi Raijin on 2016/08/03.
 //  Copyright © 2016年 masahiro.kitamura. All rights reserved.
 //
 
@@ -13,27 +13,28 @@ class MoveViewController: UIViewController {
     // UIImageViewのOutlet
     @IBOutlet weak var moveImageView: UIImageView!
     
+    
     // 表示する画像pictureの初期化
     var picture = "lion.jpeg"
     
     var img:UIImage?
-    
-    
-//    var myImageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-                
+    
         // 表示する画像を設定する.
         let myImage = UIImage(named: picture)
         
         // 画像をUIImageViewに設定する.
         moveImageView.image = myImage
-        
-        }
+
+    
+    
+    
+    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
