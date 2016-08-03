@@ -20,8 +20,9 @@ class ViewController: UIViewController {
     var timer : NSTimer!
     
     // 画面遷移時の画像の定数
-    var picture = "lion.jpeg"
+//    var picture : UIImageView!
     
+    var picture = UIImage(named: "lion.jpeg")
     
     // 進むボタンのOutlet
     @IBOutlet weak var Forward: UIButton!
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
         nextShow(n)
         
         // ImageView がタップされた時の動物の画像
-        picture = pictures[n]
+        picture = UIImage(named: pictures[n])
     }
     
     
@@ -69,8 +70,7 @@ class ViewController: UIViewController {
         nextShow(n)
         
         // ImageView がタップされた時の動物の画像
-        picture = pictures[n]
-    
+        picture = UIImage(named: pictures[n])    
     }
     
         
@@ -158,13 +158,11 @@ class ViewController: UIViewController {
 
     
     
-    //@IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+
    
-    
-        
-    
-    // 配列 pictures　画像３枚、ライオン、トラ、チーター
     let pictures = ["lion.jpeg", "tiger.jpeg", "cheetah.jpeg"]
+    
     
     var myImageView: UIImageView!
 
@@ -176,6 +174,9 @@ class ViewController: UIViewController {
         // 変数nを初期値0に設定
         n = 0
         
+        imageView.image = UIImage(named: pictures[n])
+        
+/*
         // UIImageViewを作成する.
         myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
         
@@ -191,7 +192,7 @@ class ViewController: UIViewController {
         // UIImageViewをViewに追加する.
         self.view.addSubview(myImageView)
         
-        
+ */
         
         
         
@@ -231,20 +232,12 @@ class ViewController: UIViewController {
     // 進む・戻るボタンを押すと画像が変化する処理をまとめた関数　nextShow()
     func nextShow(n:Int) {
         
-        // UIImageViewを作成する.
-        myImageView = UIImageView(frame: CGRectMake(0,0,350,180))
-        
         // 表示する画像を設定する.
         let myImage = UIImage(named: pictures[n])
         
-        // 画像をUIImageViewに設定する.
-        myImageView.image = myImage
+        // 画像をimageViewに設定する.
+        imageView.image = myImage
         
-        // 画像の表示する座標を指定する.
-        myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 180.0)
-        
-        // UIImageViewをViewに追加する.
-        self.view.addSubview(myImageView)
         
     }
 

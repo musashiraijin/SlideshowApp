@@ -39,7 +39,7 @@
                                     <action selector="playStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jea-E0-dO1"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-gq-JPC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-gq-JPC">
                                 <rect key="frame" x="100" y="60" width="400" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="uGs-xZ-B8I"/>
@@ -83,6 +83,7 @@
                     <connections>
                         <outlet property="Back" destination="bKf-kA-EQ1" id="rcI-Qu-MUk"/>
                         <outlet property="Forward" destination="Gyd-4z-7lR" id="THJ-ql-OjB"/>
+                        <outlet property="imageView" destination="Bvb-gq-JPC" id="sUh-qh-VkH"/>
                         <outlet property="playStopButton" destination="hA0-8N-uC6" id="O84-Fh-Jcs"/>
                     </connections>
                 </viewController>
