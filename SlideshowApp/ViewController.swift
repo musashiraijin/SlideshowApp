@@ -140,12 +140,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             // nが0か1なら画像を表示、その後n+1でnを増やす
             
             nextShow(n)
+            picture = pictures[n]
             n = n + 1
             
         } else if n == 2 {
             // nが2なら画像を表示後、nをn=0にする
             
             nextShow(n)
+            picture = pictures[n]
             n = 0
             
         }else if n > 2 {
@@ -177,16 +179,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         imageView.image = UIImage(named: pictures[n])
         
         
-        // UIImageViewのタップイベントの検知可能にする
-//        imageView.userInteractionEnabled = true
-        
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapped(_:)))
         
         tapGesture.delegate = self;
         
         self.view.addGestureRecognizer(tapGesture)
         
-
+        timerRunning = true
+        
+        playStop()
+        
     }
     
     

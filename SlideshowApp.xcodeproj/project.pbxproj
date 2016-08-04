@@ -13,6 +13,9 @@
 		2F77A2591D4B2BE6008853C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2571D4B2BE6008853C2 /* Main.storyboard */; };
 		2F77A25B1D4B2BE6008853C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A25A1D4B2BE6008853C2 /* Assets.xcassets */; };
 		2F77A25E1D4B2BE6008853C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A25C1D4B2BE6008853C2 /* LaunchScreen.storyboard */; };
+		2FB607DF1D53327900C6D496 /* cheetah.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB607DC1D53327900C6D496 /* cheetah.jpeg */; };
+		2FB607E01D53327900C6D496 /* lion.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB607DD1D53327900C6D496 /* lion.jpeg */; };
+		2FB607E11D53327900C6D496 /* tiger.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB607DE1D53327900C6D496 /* tiger.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2F77A25A1D4B2BE6008853C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F77A25D1D4B2BE6008853C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F77A25F1D4B2BE6008853C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB607DC1D53327900C6D496 /* cheetah.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheetah.jpeg; sourceTree = "<group>"; };
+		2FB607DD1D53327900C6D496 /* lion.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpeg; sourceTree = "<group>"; };
+		2FB607DE1D53327900C6D496 /* tiger.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				2F19641E1D5227F700ADF9C0 /* MoveViewController.swift */,
 				2F77A2571D4B2BE6008853C2 /* Main.storyboard */,
 				2F77A25A1D4B2BE6008853C2 /* Assets.xcassets */,
+				2FB607DC1D53327900C6D496 /* cheetah.jpeg */,
+				2FB607DD1D53327900C6D496 /* lion.jpeg */,
+				2FB607DE1D53327900C6D496 /* tiger.jpeg */,
 				2F77A25C1D4B2BE6008853C2 /* LaunchScreen.storyboard */,
 				2F77A25F1D4B2BE6008853C2 /* Info.plist */,
 			);
@@ -126,8 +135,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F77A25E1D4B2BE6008853C2 /* LaunchScreen.storyboard in Resources */,
+				2FB607E01D53327900C6D496 /* lion.jpeg in Resources */,
 				2F77A25B1D4B2BE6008853C2 /* Assets.xcassets in Resources */,
+				2FB607DF1D53327900C6D496 /* cheetah.jpeg in Resources */,
 				2F77A2591D4B2BE6008853C2 /* Main.storyboard in Resources */,
+				2FB607E11D53327900C6D496 /* tiger.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
