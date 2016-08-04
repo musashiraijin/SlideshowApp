@@ -107,9 +107,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             
         } else if timerRunning == true {
             // timerが動いていたら
-                        
+            
             // timerを破棄する.
-            timer.invalidate()
+            timer?.invalidate()
             
             // ボタンのタイトル変更.
             playStopButton.setTitle("再生", forState: .Normal)
@@ -185,10 +185,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.view.addGestureRecognizer(tapGesture)
         
-        timerRunning = true
-        
-        playStop(self)
-        
     }
     
     
@@ -209,6 +205,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             let img: MoveViewController = (segue.destinationViewController as? MoveViewController)!
             
             img.imgText = picture
+            
+            timerRunning = true
+            
+            playStop(self)
+
         }
     }
     
