@@ -186,8 +186,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.view.addGestureRecognizer(tapGesture)
         
-        
-//        imageView.addGestureRecognizer(tapGestureRecognizer)
 
     }
     
@@ -205,27 +203,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         if (segue.identifier == "toMoveViewController") {
             
-            let picture: MoveViewController = (segue.destinationViewController as? MoveViewController)!
+            let img: MoveViewController = (segue.destinationViewController as? MoveViewController)!
             
             
-            picture.img = imageView.image
+            img.imgText = picture
         }
     }
     
     
     
-    
-/*
-    // 画像がタップされた時に反応する処理を書いた関数
-    func didClickImageView(recognizer: UIGestureRecognizer) {
-        if let varImageView = recognizer.view as? UIImageView {
-            let nextViewController = moveImageView
-            nextViewController.image = picture
-            /** netViewController への遷移 */
-        }
-    }
-*/
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

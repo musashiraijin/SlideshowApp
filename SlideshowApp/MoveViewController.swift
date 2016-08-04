@@ -15,25 +15,24 @@ class MoveViewController: UIViewController {
     
     
     // 表示する画像pictureの初期化
-    var picture = "lion.jpeg"
+    var imgText:String?
     
-    var img:UIImage?
+//    var img:UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     
-        // 表示する画像を設定する.
-        let myImage = UIImage(named: picture)
-        
-        // 画像をUIImageViewに設定する.
-        moveImageView.image = myImage
+        if imgText != nil {
+            // ViewControllerからのメッセージを表示する
+                        
+            // 画像をUIImageViewに設定する.
+            moveImageView.image = UIImage(named: imgText!)
 
-    
-    
-    
-    
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
