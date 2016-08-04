@@ -107,10 +107,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             
         } else if timerRunning == true {
             // timerが動いていたら
-            
-            timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
-            
-            
+                        
             // timerを破棄する.
             timer.invalidate()
             
@@ -190,7 +187,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         timerRunning = true
         
-        playStop()
+        playStop(self)
         
     }
     
@@ -208,8 +205,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         if (segue.identifier == "toMoveViewController") {
             
-            let img: MoveViewController = (segue.destinationViewController as? MoveViewController)!
             
+            let img: MoveViewController = (segue.destinationViewController as? MoveViewController)!
             
             img.imgText = picture
         }
