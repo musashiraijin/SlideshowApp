@@ -108,6 +108,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         } else if timerRunning == true {
             // timerが動いていたら
             
+            timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
+            
+            
             // timerを破棄する.
             timer.invalidate()
             
