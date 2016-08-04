@@ -141,7 +141,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="moveImageView" destination="7UQ-8G-6Yv" id="mla-0T-S3b"/>
+                        <outlet property="moveImageView" destination="7UQ-8G-6Yv" id="ppx-3R-TZH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9S-tV-QzP" userLabel="First Responder" sceneMemberID="firstResponder"/>

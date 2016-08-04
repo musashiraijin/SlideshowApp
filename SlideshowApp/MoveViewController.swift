@@ -14,7 +14,7 @@ class MoveViewController: UIViewController {
     @IBOutlet weak var moveImageView: UIImageView!
     
     
-    // 表示する画像pictureの初期化
+    // 表示する画像の変数
     var imgText:String?
     
 //    var img:UIImage?
