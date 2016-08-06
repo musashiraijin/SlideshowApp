@@ -97,7 +97,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             Back.enabled = false
             
             
-            
             //timerを生成する.
             timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.slideShow), userInfo: nil, repeats: true)
             
@@ -108,8 +107,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         } else if timerRunning == true {
             // timerが動いていたら
             
+            
             // timerを破棄する.
-            timer?.invalidate()
+            timer!.invalidate()
             
             // ボタンのタイトル変更.
             playStopButton.setTitle("再生", forState: .Normal)
